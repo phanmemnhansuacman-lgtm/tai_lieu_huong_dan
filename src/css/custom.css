@@ -1,0 +1,216 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+/* You can override the default Infima variables here. */
+:root {
+--ifm-font-family-base: "Inter", Arial, sans-serif;
+  --ifm-color-primary: #852e2e;
+  --ifm-color-primary-dark: #9c2f2f;
+  --ifm-color-primary-darker: #881a1a;
+  --ifm-color-primary-darkest: #771b1b;
+  --ifm-color-primary-light: #cf6464;
+  --ifm-color-primary-lighter: #df4545;
+  --ifm-color-primary-lightest: #3f1616;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #852e2e;
+  --ifm-color-primary-dark: #9c2f2f;
+  --ifm-color-primary-darker: #881a1a;
+  --ifm-color-primary-darkest: #771b1b;
+  --ifm-color-primary-light: #cf6464;
+  --ifm-color-primary-lighter: #df4545;
+  --ifm-color-primary-lightest: #3f1616;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+/* Đổi font toàn bộ website sang Inter */ 
+
+
+
+
+/* Chỉnh nội dung bài viết */
+.markdown {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* Chỉnh chữ menu bên trái */
+.menu__link {
+  font-size: 15px;
+}
+
+
+/* Chỉnh tiêu đề */
+h1, h2, h3 {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 700;
+}
+/* Đổi toàn bộ font Docusaurus sang Inter */
+
+
+/* Căn ảnh giữa trang */
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html,
+body,
+.navbar,
+.menu,
+.menu__link,
+.markdown,
+.theme-doc-markdown,
+.pagination-nav,
+.table-of-contents {
+  font-family: var(--ifm-font-family-base);
+}
+.img-large {
+  width: 90%;
+  max-width: 1000px;
+  display: block;
+  margin: auto;
+}
+.img-border {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 5px;
+}
+.markdown h1 {
+  font-size: 28px;
+}
+
+.markdown h2 {
+  font-size: 22px;
+}
+
+.markdown h3 {
+  font-size: 18px;
+}
+/* src/css/custom.css */
+
+.markdown img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shortcut-table {
+  width: min(760px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  table-layout: fixed;
+}
+
+.centered-doc-table {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  table-layout: auto;
+}
+.centered-doc-table td,
+.centered-doc-table th {
+  white-space: normal;
+  word-break: normal;
+}
+
+.centered-doc-table th,
+.centered-doc-table td {
+  text-align: left;
+  vertical-align: top;
+}
+.theme-doc-markdown img {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  max-width: 100%;
+}
+.theme-doc-markdown img {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 8px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+.theme-doc-markdown table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.theme-doc-markdown th,
+.theme-doc-markdown td {
+  text-align: left;
+}
+
+.theme-doc-markdown td:last-child,
+.theme-doc-markdown th:last-child {
+  text-align: right;
+}
+.theme-doc-markdown td.content-left {
+  text-align: left !important;
+}
+.centered-doc-table td.content-left {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.centered-doc-table td table {
+  width: 100%;
+  table-layout: auto;
+  font-size: 0.85em;
+}
+.bctc-table {
+  width: 70%;
+  margin: 0 auto;
+  table-layout: fixed;
+}
+
+.bctc-table th {
+  text-align: center;
+}
+
+.bctc-table td {
+  text-align: left;
+}
+.sodu-table {
+  width: 90%;
+  margin: 0 auto;
+  table-layout: fixed;
+}
+
+.sodu-table th {
+  text-align: center;
+}
+
+.sodu-table td {
+  text-align: center;
+}
+
+.sodu-table td.content-left {
+  text-align: left;
+}
+.chucnang-table {
+  width: 90%;
+  margin: 0 auto;
+  table-layout: fixed;
+}
+
+.chucnang-table th {
+  text-align: center;
+}
+
+.chucnang-table td {
+  text-align: center;
+}
+
+.chucnang-table td.content-left {
+  text-align: left;
+}
