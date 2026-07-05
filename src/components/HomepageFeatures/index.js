@@ -4,42 +4,44 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Phần mềm',
+    image: require('@site/static/img/anh-bia-phan-mem.png').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Phần mềm ACMan được thiết kế với giao diện thân thiện, dễ sử dụng giúp người dùng tiết kiệm được tối đa thời gian sử dụng
+      .
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Tư vấn',
+    image: require('@site/static/img/anh-bia-tu-van.png').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Đội ngũ chuyên gia luôn đồng hành giải đáp mọi vướng mắc liên quan đến thuế, tài chính, hỗ trợ tư vấn giải pháp phù hợp với từng doanh nghiệp.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Đào tạo',
+    image: require('@site/static/img/anh-bia-dao-tao.png').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Chương trình đào tạo sát thực tế như bạn đang làm công việc của một kế toán thực thụ, đồng hàng để bạn tự tin trên con đường làm nghề.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({image, Svg, title, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        {image ? (
+          <img src={image} className={styles.featureSvg} alt={title} />
+        ) : (
+          <Svg className={styles.featureSvg} role="img" />
+        )}
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

@@ -1,0 +1,54 @@
+.shortcut-table{
+    width:70%;
+    margin:30px auto;
+    border-collapse:collapse;
+    table-layout:fixed;
+    font-size:15px;
+    background:#fff;
+}
+
+.shortcut-table th{
+
+    background:#c62828;
+    color:#fff;
+
+    padding:12px;
+
+    text-align:center;
+
+    border:1px solid #ddd;
+}
+
+.shortcut-table td{
+
+    padding:10px 14px;
+
+    border:1px solid #ddd;
+
+    vertical-align:middle;
+}
+
+.shortcut-table td:first-child,
+.shortcut-table th:first-child{
+
+    width:180px;
+
+    text-align:center;
+
+    font-weight:700;
+}
+
+.shortcut-table td:last-child{
+
+    text-align:left;
+}
+
+.shortcut-table tbody tr:nth-child(even){
+
+    background:#fafafa;
+}
+
+.shortcut-table tbody tr:hover{
+
+    background:#fff3f3;
+}

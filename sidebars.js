@@ -1,9 +1,6 @@
 const sidebars = {
   tutorialSidebar: [
-    {
-      type: 'doc',
-      id: 'intro',
-    },
+  
 
     {
       type: 'category',
@@ -52,7 +49,7 @@ const sidebars = {
 
             {
               type: 'category',
-              label: '2.2 Thiết lập danh mục trên phần mềm',
+              label: '2.2. Thiết lập danh mục trên phần mềm',
               items: [
                 'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.2-thiet-lap-danh-muc-tren-phan-mem/2.2.1-danh-muc-phim-tat',
                 'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.2-thiet-lap-danh-muc-tren-phan-mem/2.2.2-danh-muc-khach-hang',
@@ -60,7 +57,7 @@ const sidebars = {
 
                 {
                   type: 'category',
-                  label: '2.2.4 Thiết lập chung',
+                  label: '2.2.4. Thiết lập chung',
                   items: [
                     'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.2-thiet-lap-danh-muc-tren-phan-mem/2.2.4-thiet-lap-chung/2.2.4.1-thiet-lap-danh-so-chung-tu-tu-dong',
                     'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.2-thiet-lap-danh-muc-tren-phan-mem/2.2.4-thiet-lap-chung/2.2.4.2-thiet-lap-ket-chuyen-tu-dong',
@@ -73,7 +70,7 @@ const sidebars = {
 
             {
               type: 'category',
-              label: '2.3 Nguyên tắc nhập liệu trên phần mềm kế toán ACMan 9.1',
+              label: '2.3. Nguyên tắc nhập liệu trên phần mềm kế toán ACMan 9.1',
               link: {
              type: 'doc',
               id: 'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.3-nguyen-tac-nhap-lieu/2.3-index',
@@ -98,7 +95,7 @@ const sidebars = {
 
                 {
                   type: 'category',
-                  label: '2.3.4 Chứng từ, sổ kế toán và báo cáo',
+                  label: '2.3.4. Chứng từ, sổ kế toán và báo cáo',
                   items: [
                     'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.3-nguyen-tac-nhap-lieu/2.3.4-chung-tu-so-ke-toan/2.3.4.1-in-chung-tu-ke-toan',
                     'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.3-nguyen-tac-nhap-lieu/2.3.4-chung-tu-so-ke-toan/2.3.4.2-phat-hanh-so-ke-toan',
@@ -113,13 +110,13 @@ const sidebars = {
 
             {
               type: 'category',
-              label: '2.4 Hệ thống phần mềm tích hợp',
+              label: '2.4. Hệ thống phần mềm tích hợp',
               items: [
                 'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.4-he-thong-pm-tich-hop/2.4.1-pm-hddt',
 
                 {
                   type: 'category',
-                  label: '2.4.2 Phần mềm tải, import hóa đơn và sao kê ngân hàng',
+                  label: '2.4.2. Phần mềm tải, import hóa đơn và sao kê ngân hàng',
                   items: [
                     'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.4-he-thong-pm-tich-hop/2.4.2-tai-va-ip-hoadon/2.4.2.1-tai-va-ip-hoadon-tct',
                     'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.4-he-thong-pm-tich-hop/2.4.2-tai-va-ip-hoadon/2.4.2.2-tai-va-ip-hoadon-website',
@@ -129,7 +126,7 @@ const sidebars = {
 
                 {
                   type: 'category',
-                  label: '2.4.3 Phần mềm nhân sự và tiền lương',
+                  label: '2.4.3. Phần mềm nhân sự và tiền lương',
                   items: [
                     'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.4-he-thong-pm-tich-hop/2.4.3-pm-nhan-su/2.4.3.1-co-che-chinh-sach',
                     'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.4-he-thong-pm-tich-hop/2.4.3-pm-nhan-su/2.4.3.2-mo-ta-cong-viec',
@@ -144,10 +141,12 @@ const sidebars = {
             },
             {
   type: 'category',
-  label: '2.5 Phần mềm ACMan khác',
-  items: [
-    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.5-phan-mem-acman-khac',
-  ],
+  label: '2.5. Phần mềm ACMan khác',
+  link: {
+    type: 'doc',
+    id: 'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.5-phan-mem-acman-khac',
+  },
+  items: [],
 },
 
           ],
@@ -172,7 +171,7 @@ const sidebars = {
 
             {
               type: 'category',
-              label: '3.4 Phát hành sổ kế toán',
+              label: '3.4. Phát hành sổ kế toán',
               items: [
                 'Sach_ke_toan_may_thoi_dai_so/phan-3-thuc-hanh/3.4-phat-hanh/3.4.1-in-so-ketoan',
                 'Sach_ke_toan_may_thoi_dai_so/phan-3-thuc-hanh/3.4-phat-hanh/3.4.2-phat-hanh-sokt',
@@ -195,18 +194,25 @@ const sidebars = {
         },
 
         {
-          type: 'category',
+          type: 'doc',
+          id: 'Sach_ke_toan_may_thoi_dai_so/phan-5-cau-hoi-on-tap/cau-hoi',
           label: 'PHẦN V - CÂU HỎI ÔN TẬP',
-          items: [
-            'Sach_ke_toan_may_thoi_dai_so/phan-5-cau-hoi-on-tap/cau-hoi',
-          ],
+          
         },
 
         {
-          type: 'category',
+          type: 'doc',
+          id: 'Sach_ke_toan_may_thoi_dai_so/phan-6-xu-ly-loi/xu-ly-loi',
           label: 'PHẦN VI - XỬ LÝ LỖI',
+        
+        },
+        {
+          type: 'category',
+          label: 'PHẦN VII - HỆ THỐNG TÀI KHOẢN',
           items: [
-            'Sach_ke_toan_may_thoi_dai_so/phan-6-xu-ly-loi/xu-ly-loi',
+            'Sach_ke_toan_may_thoi_dai_so/phan-7-he-thong-tai-khoan/7.1-hd-tra-cuu-tai-khoan-khi-hach-toan',
+
+            'Sach_ke_toan_may_thoi_dai_so/phan-7-he-thong-tai-khoan/7.2-bang-tai-khoan-tt99'
           ],
         },
 
@@ -214,5 +220,7 @@ const sidebars = {
     },
   ],
 };
+  
+
 
 module.exports = sidebars;

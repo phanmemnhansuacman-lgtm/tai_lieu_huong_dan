@@ -6,6 +6,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 /* You can override the default Infima variables here. */
+@import "./centered-doc-table.css";
 :root {
 --ifm-font-family-base: "Inter", Arial, sans-serif;
   --ifm-color-primary: #852e2e;
@@ -103,29 +104,6 @@ body,
   margin-right: auto;
 }
 
-.shortcut-table {
-  width: min(760px, 100%);
-  margin-left: auto;
-  margin-right: auto;
-  table-layout: fixed;
-}
-
-.centered-doc-table {
-  width: min(1100px, 100%);
-  margin: 0 auto;
-  table-layout: auto;
-}
-.centered-doc-table td,
-.centered-doc-table th {
-  white-space: normal;
-  word-break: normal;
-}
-
-.centered-doc-table th,
-.centered-doc-table td {
-  text-align: left;
-  vertical-align: top;
-}
 .theme-doc-markdown img {
   border: 1px solid #e5e7eb;
   border-radius: 8px;
@@ -150,10 +128,6 @@ body,
   text-align: left;
 }
 
-.theme-doc-markdown td:last-child,
-.theme-doc-markdown th:last-child {
-  text-align: right;
-}
 .theme-doc-markdown td.content-left {
   text-align: left !important;
 }
@@ -213,4 +187,426 @@ body,
 
 .chucnang-table td.content-left {
   text-align: left;
+}
+/* Hero animation */
+.hero__title {
+  animation: slideUp 0.7s ease both;
+}
+
+.hero__subtitle {
+  animation: slideUp 0.7s ease 0.2s both;
+}
+
+.hero .button {
+  animation: slideUp 0.7s ease 0.4s both, pulse 1.5s ease 1s 2;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(255,255,255,0); }
+}
+
+.account-table th {
+background:#1f4e79;
+color:white;
+text-align:center;
+padding:10px;
+border:1px solid #ddd;
+}
+
+
+.account-table td {
+border:1px solid #ddd;
+padding:8px;
+}
+
+
+/* Cột 1,2,3,4 căn giữa */
+
+.account-table td:nth-child(1),
+.account-table td:nth-child(2),
+.account-table td:nth-child(3),
+.account-table td:nth-child(4)
+{
+text-align:center;
+}
+
+
+/* Cột tên tài khoản căn trái */
+
+.account-table td:nth-child(5)
+{
+text-align:left;
+}
+.flex-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.flex-row a {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+/* ==========================
+   LEGAL CARD
+========================== */
+
+.legal-card-container{
+    display:flex;
+    gap:24px;
+    margin:28px 0;
+    flex-wrap:wrap;
+}
+
+.legal-card{
+    flex:1;
+    min-width:340px;
+
+    display:flex;
+    gap:18px;
+
+    padding:24px;
+
+    background:#fff;
+
+    border-radius:16px;
+
+    border:1px solid #e5e7eb;
+
+    border-left:6px solid #b52727;
+
+    box-shadow:0 8px 24px rgba(0,0,0,.06);
+
+    transition:.3s ease;
+}
+
+.legal-card:hover{
+    transform:translateY(-6px);
+
+    border-left-color:#b52727;
+
+    box-shadow:0 16px 36px rgba(22,119,255,.18);
+}
+
+.legal-icon{
+
+    width:64px;
+    height:64px;
+
+    flex-shrink:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:30px;
+
+    background:#eef6ff;
+
+    border-radius:50%;
+}
+
+.legal-content{
+
+    flex:1;
+}
+
+.legal-content h3{
+
+    margin:0;
+
+    font-size:21px;
+
+    font-weight:700;
+
+    color:#b52727;
+}
+
+.legal-date{
+
+    display:inline-block;
+
+    margin:10px 0 14px;
+
+    padding:4px 12px;
+
+    background:#f2f8ff;
+
+    color:#b52727;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    font-weight:600;
+}
+
+.legal-content p{
+
+    margin:0;
+
+    line-height:1.8;
+
+    color:#444;
+
+    text-align:justify;
+}
+/* ===========================
+   ACCOUNTING REGULATION CARD
+=========================== */
+
+.accounting-regulation-card{
+    max-width:720px;
+
+    margin:35px auto;
+
+    padding:28px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    border-left:6px solid #c62828;
+
+    box-shadow:0 10px 28px rgba(0,0,0,.08);
+}
+
+.regulation-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:20px;
+}
+
+.regulation-icon{
+
+    width:68px;
+    height:68px;
+
+    border-radius:50%;
+
+    background:#fdf1f1;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:34px;
+
+    flex-shrink:0;
+}
+
+.regulation-header h3{
+
+    margin:0;
+
+    color:#c62828;
+
+    font-size:24px;
+
+    font-weight:700;
+}
+
+.regulation-header span{
+
+    display:block;
+
+    margin-top:6px;
+
+    color:#777;
+
+    font-size:15px;
+}
+
+.regulation-list{
+
+    margin:0;
+
+    padding-left:22px;
+}
+
+.regulation-list li{
+
+    margin:14px 0;
+
+    font-size:17px;
+
+    line-height:1.7;
+}
+
+.regulation-list strong{
+
+    color:#c62828;
+}
+.feature-wrapper{
+
+    max-width:1100px;
+
+    margin:50px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    row-gap:80px;
+
+    justify-items:center;
+}
+
+/* Tạo hình chữ W */
+.item-0,
+.item-2,
+.item-4{
+    transform:translateY(0);
+}
+
+.item-1,
+.item-3,
+.item-5{
+    transform:translateY(90px);
+}
+
+/* ===================== */
+
+.feature-circle{
+
+    width:180px;
+    height:180px;
+
+    background:#fff;
+
+    border:2px solid #d32f2f;
+
+    border-radius:50%;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+
+    text-align:center;
+
+    padding:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.10);
+
+    transition:.3s;
+}
+
+.feature-circle:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 16px 35px rgba(211,47,47,.20);
+}
+
+.feature-icon{
+
+    font-size:38px;
+
+    margin-bottom:10px;
+}
+
+.feature-text{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    line-height:1.4;
+
+    color:#333;
+}
+
+/* Dấu tích */
+
+.feature-check{
+
+    position:absolute;
+
+    bottom:-16px;
+
+    width:34px;
+    height:34px;
+
+    border-radius:50%;
+
+    background:#d32f2f;
+
+    color:#fff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    border:4px solid #fff;
+
+    box-shadow:0 4px 12px rgba(211,47,47,.35);
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+.feature-wrapper{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.item-1,
+.item-3,
+.item-5{
+
+transform:none;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.feature-wrapper{
+
+grid-template-columns:1fr;
+
+row-gap:45px;
+
+}
+
+.feature-circle{
+
+width:160px;
+height:160px;
+
+}
+
+.item-0,
+.item-1,
+.item-2,
+.item-3,
+.item-4,
+.item-5{
+
+transform:none;
+
+}
+
 }

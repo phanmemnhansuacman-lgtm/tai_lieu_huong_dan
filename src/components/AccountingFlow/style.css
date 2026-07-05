@@ -1,0 +1,267 @@
+/* ==========================================
+   ACCOUNTING FLOW
+========================================== */
+
+.flow {
+  width: 100%;
+  margin: 24px 0;
+}
+
+/* ==========================================
+   TOOLBAR
+========================================== */
+
+.toolbar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.toolbar button {
+  padding: 9px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #263593;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+.toolbar button:hover {
+  background: #1d2b78;
+  transform: translateY(-2px);
+}
+
+.toolbar button.active {
+  background: #e67e22;
+}
+
+/* ==========================================
+   SVG
+========================================== */
+
+.diagram {
+  width: 100%;
+  min-height: 780px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.title {
+  fill: #263593;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+/* ==========================================
+   NODE
+========================================== */
+
+.flow-node {
+  animation: fadeNode .35s ease;
+}
+
+.node-shadow {
+  fill: #000;
+  opacity: .08;
+}
+
+.node-box {
+  fill: #ffffff;
+  stroke: #263593;
+  stroke-width: 3;
+  transition: .25s;
+}
+
+.node-box.hover {
+  fill: #eef3ff;
+  stroke:#1b2f91;
+  stroke-width: 4;
+}
+
+.flow-node.active .node-box {
+  filter: drop-shadow(0 0 12px rgba(38,53,147,.25));
+}
+
+.node-label {
+  fill: #263593;
+  font-size: 16px;
+  font-weight: 700;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ==========================================
+   TOOLTIP
+========================================== */
+
+.tooltip-box {
+  fill: #fff;
+  stroke: #ddd;
+  stroke-width: 1;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,.15));
+}
+
+.tooltip-title {
+  fill: #263593;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.tooltip-content {
+  fill: #444;
+  font-size: 12px;
+}
+
+/* ==========================================
+   ARROW
+========================================== */
+
+.arrow {
+  fill: none;
+  stroke: #263593;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: drawArrow .8s ease forwards;
+}
+
+.arrow.thin {
+  stroke-width: 2;
+}
+
+.arrow.thick {
+  stroke-width: 3;
+}
+
+.arrow.double {
+  stroke-width: 2.5;
+  stroke-dasharray: none;
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes drawArrow {
+
+  from {
+    opacity: 0;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+
+  to {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+
+}
+
+@keyframes fadeNode {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:900px){
+
+  .diagram{
+    min-height:650px;
+  }
+
+}
+
+@media (max-width:700px){
+
+  .toolbar{
+    justify-content:center;
+  }
+
+  .toolbar button{
+    flex:1;
+    min-width:120px;
+  }
+
+}
+.accounting-flow{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:40px 0;
+}
+
+.flow-box{
+    width:360px;
+    padding:24px;
+    border-radius:18px;
+    color:#fff;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.flow-box:hover{
+    transform:translateY(-6px);
+}
+
+.flow-icon{
+    font-size:44px;
+    margin-bottom:10px;
+}
+
+.flow-box h3{
+    margin:8px 0 12px;
+    font-size:22px;
+}
+
+.flow-box p{
+    margin:0;
+    line-height:1.6;
+    font-size:15px;
+}
+
+.blue{
+    background:linear-gradient(135deg,#3b82f6,#1d4ed8);
+}
+
+.green{
+    background:linear-gradient(135deg,#22c55e,#15803d);
+}
+
+.orange{
+    background:linear-gradient(135deg,#f59e0b,#ea580c);
+}
+
+.purple{
+    background:linear-gradient(135deg,#8b5cf6,#6d28d9);
+}
+
+.flow-arrow{
+    font-size:36px;
+    color:#666;
+    margin:12px 0;
+}
+
+@media (max-width:600px){
+    .flow-box{
+        width:95%;
+    }
+}

@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'ACMan',
   tagline: 'Nghề kế toán chuyên nghiệp',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo-2.jpg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -51,6 +51,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          
         },
         blog: {
           showReadingTime: true,
@@ -87,10 +88,10 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'ACMan',
+        title: 'Trang chủ',
         logo: {
           alt: 'ACMan Logo',
-          src: 'img/logo.svg',
+          src: 'img/acman-logo-1.png',
         },
         items: [
           {
@@ -100,6 +101,10 @@ const config = {
             label: 'Tài liệu',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {
+  type: 'search',
+  position: 'right',
+},
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
@@ -178,3 +183,16 @@ const config = {
 };
 
 export default config;
+plugins: [
+  [
+    require.resolve("@easyops-cn/docusaurus-search-local"),
+    {
+      hashed: true,
+      language: ["vi", "en"],
+      docsRouteBasePath: "/docs",
+      indexDocs: true,
+      indexBlog: false,
+      indexPages: false,
+    },
+  ],
+]

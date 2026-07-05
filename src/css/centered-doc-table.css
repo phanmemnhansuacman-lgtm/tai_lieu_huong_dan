@@ -1,0 +1,81 @@
+/* ==========================
+   CENTERED DOC TABLE
+========================== */
+
+.centered-doc-table{
+
+    width:75%;
+
+    margin:30px auto;
+
+    border-collapse:collapse;
+
+    table-layout:fixed;
+
+    background:#fff;
+
+    font-size:15px;
+}
+
+/* Header */
+
+.centered-doc-table th{
+
+    background:#c62828;
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:12px;
+
+    border:1px solid #ddd;
+}
+
+/* Body */
+
+.centered-doc-table td{
+
+    padding:10px 14px;
+
+    border:1px solid #ddd;
+
+    vertical-align:top;
+
+    line-height:1.6;
+
+    word-break:break-word;
+}
+
+/* Cột đầu */
+
+.centered-doc-table td:first-child,
+.centered-doc-table th:first-child{
+
+    width:180px;
+
+    text-align:center;
+
+    font-weight:600;
+}
+
+/* Cột nội dung */
+
+.centered-doc-table td:last-child{
+
+    text-align:left;
+}
+
+/* Hover */
+
+.centered-doc-table tbody tr:hover{
+
+    background:#fff5f5;
+}
+
+/* Zebra */
+
+.centered-doc-table tbody tr:nth-child(even){
+
+    background:#fafafa;
+}

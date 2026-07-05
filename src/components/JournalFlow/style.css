@@ -1,0 +1,75 @@
+.journal-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin: 30px 0;
+}
+
+/* BOX CHÍNH */
+.flow-box {
+  width: 360px;
+  padding: 20px 22px;
+  border-radius: 16px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s ease;
+}
+
+.flow-box:hover {
+  transform: translateY(-5px);
+}
+
+/* ICON */
+.flow-icon {
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+
+/* TITLE */
+.flow-box h3 {
+  margin: 6px 0 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* TEXT */
+.flow-box p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* MÀU SẮC TỪNG BƯỚC */
+.blue {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.green {
+  background: linear-gradient(135deg, #22c55e, #15803d);
+}
+
+.orange {
+  background: linear-gradient(135deg, #f59e0b, #ea580c);
+}
+
+.purple {
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+}
+
+/* MŨI TÊN */
+.flow-arrow {
+  font-size: 32px;
+  color: #666;
+  line-height: 1;
+  user-select: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .flow-box {
+    width: 92%;
+  }
+}
