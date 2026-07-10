@@ -4,7 +4,7 @@
 
 .centered-doc-table{
 
-    width:75%;
+    width:90%;
 
     margin:30px auto;
 
@@ -15,6 +15,7 @@
     background:#fff;
 
     font-size:15px;
+    line-height:1.6;
 }
 
 /* Header */

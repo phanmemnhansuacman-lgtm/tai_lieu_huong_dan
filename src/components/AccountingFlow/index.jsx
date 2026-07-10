@@ -53,7 +53,6 @@ export default function AccountingFlow() {
         >
           NHẬT KÝ CHUNG
         </text>
-
         {/* STEP 1 */}
 
         {step >= 1 &&
@@ -125,5 +124,3 @@ export default function AccountingFlow() {
     </div>
   );
 }
-import React from "react";
-import "./style.css";

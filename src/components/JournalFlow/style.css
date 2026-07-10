@@ -8,7 +8,7 @@
 
 /* BOX CHÍNH */
 .flow-box {
-  width: 360px;
+  width: 420px;
   padding: 20px 22px;
   border-radius: 16px;
   color: #fff;
@@ -37,9 +37,12 @@
 /* TEXT */
 .flow-box p {
   margin: 0;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.6;
   opacity: 0.95;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* MÀU SẮC TỪNG BƯỚC */

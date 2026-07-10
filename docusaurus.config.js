@@ -14,11 +14,6 @@ const config = {
   tagline: 'Nghề kế toán chuyên nghiệp',
   favicon: 'img/logo-2.jpg',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
-  future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
-  },
-
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -53,21 +48,7 @@ const config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -98,17 +79,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tài liệu',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-  type: 'search',
-  position: 'right',
-},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
+            label: 'Hướng dẫn sử dụng',
           },
         ],
       },
@@ -121,7 +92,7 @@ const config = {
       items: [
         {
           label: 'Hướng dẫn sử dụng',
-          to: '/docs/intro',
+          to: '/docs',
         },
       ],
     },
@@ -152,19 +123,7 @@ const config = {
               },
             ],
           },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
+          
         ],
         // copyright: `Copyright © ${new Date().getFullYear()} ACMan`,
       },
@@ -183,16 +142,3 @@ const config = {
 };
 
 export default config;
-plugins: [
-  [
-    require.resolve("@easyops-cn/docusaurus-search-local"),
-    {
-      hashed: true,
-      language: ["vi", "en"],
-      docsRouteBasePath: "/docs",
-      indexDocs: true,
-      indexBlog: false,
-      indexPages: false,
-    },
-  ],
-]

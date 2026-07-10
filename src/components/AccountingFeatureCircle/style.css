@@ -1,7 +1,7 @@
 .feature-wrapper{
     position: relative;
-    width: 900px;      /* giảm từ 1100 */
-    height: 300px;     /* giảm từ 430 */
+    width: 900px;      /* quay lại */
+    height: 320px;     /* tăng chút */
     margin: 30px auto 50px;
 }
 
@@ -9,8 +9,8 @@
 .feature-circle{
     position:absolute;
 
-    width:130px;
-    height:130px;
+    width:135px;       /* giảm từ 145px */
+    height:135px;      /* giảm từ 145px */
 
     border:2px solid #d32f2f;
     border-radius:50%;
@@ -68,31 +68,31 @@
 /* Vị trí */
 
 .item-0{
-    left:0;
+    left:25px;         /* thêm margin trái */
     top:0;
 }
 
 .item-1{
-    left:155px;
-    top:75px;
+    left:187px;        /* điều chỉnh lại */
+    top:85px;
 }
 
 .item-2{
-    left:310px;
+    left:302px;        /* điều chỉnh lại */
     top:0;
 }
 
 .item-3{
-    left:465px;
-    top:75px;
+    left:464px;        /* điều chỉnh lại */
+    top:85px;
 }
 
 .item-4{
-    left:620px;
+    left:579px;        /* điều chỉnh lại */
     top:0;
 }
 
 .item-5{
-    left:775px;
-    top:75px;
+    left:741px;        /* cân bằng margin phải */
+    top:85px;
 }

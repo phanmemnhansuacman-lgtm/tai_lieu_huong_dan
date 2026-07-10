@@ -18,6 +18,14 @@
   --ifm-color-primary-lightest: #3f1616;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-container-width-xl: 1140px;
+  --ac-red: #C31E2C;
+  --ac-red-tint: #FBEAEA;
+  --ac-red-deep: #7A1220;
+  --ac-paper: #F7F7F5;
+  --ac-paper-deep: #F0EFEA;
+  --ac-paper-line: #E4E3DD;
+  --ac-graphite: #6E6C64;
 }
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
@@ -141,6 +149,16 @@ body,
   table-layout: auto;
   font-size: 0.85em;
 }
+
+.sodu-table,
+.centered-doc-table {
+  width: 90%;
+  max-width: 100%;
+  margin: 30px auto;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
 .bctc-table {
   width: 70%;
   margin: 0 auto;
@@ -191,10 +209,19 @@ body,
 /* Hero animation */
 .hero__title {
   animation: slideUp 0.7s ease both;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.15);
 }
 
 .hero__subtitle {
   animation: slideUp 0.7s ease 0.2s both;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 400;
+  color: rgba(255,255,255,0.88);
+  margin-top: 0.5rem;
 }
 
 .hero .button {
@@ -609,4 +636,106 @@ transform:none;
 
 }
 
+}
+/* ===== FOOTER ===== */
+
+.footer__col {
+  text-align: center;
+}
+
+.footer__items {
+  padding: 0;
+}
+
+.footer__bottom {
+  text-align: center;
+  margin-top: 2rem;
+}
+/* ===== NAVBAR ===== */
+
+.navbar {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+  padding: 0.5rem 1.5rem;
+}
+
+.navbar__brand {
+  margin-right: 2rem;
+}
+
+.navbar__link {
+  font-weight: 500;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.navbar__link:hover {
+  background: rgba(133, 46, 46, 0.08);
+  color: #7b1f1f;
+}
+
+.navbar__link--active {
+  color: #7b1f1f;
+  font-weight: 700;
+}
+
+/* Nút dark mode toggle */
+.navbar__items--right .clean-btn,
+.navbar__items--right button {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.navbar__items--right .clean-btn:hover,
+.navbar__items--right button:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+body {
+  background:
+    radial-gradient(ellipse 900px 420px at 15% -10%, var(--ac-red-tint) 0%, transparent 55%),
+    radial-gradient(ellipse 700px 380px at 100% 0%, var(--ac-paper-deep) 0%, transparent 50%),
+    var(--ac-paper);
+}
+/* 1. Nới khung chứa tổng của trang docs (mặc định Docusaurus giới hạn ~1140px) */
+.container {
+  max-width: 1400px !important;
+}
+
+/* 2. Nới cột nội dung chính, thu hẹp khoảng trống 2 bên do grid cột để lại */
+.docItemCol_ {
+  max-width: 100% !important;
+  flex: 1 1 auto !important;
+}
+/* Lưu ý: Docusaurus thường gắn thêm hash ngẫu nhiên vào class module,
+   ví dụ .docItemCol_VOVn — bạn bấm Inspect vào cột content để lấy đúng class */
+
+/* 3. Card nội dung chính — giảm padding ngang, tăng chiều rộng thực tế */
+.theme-doc-markdown {
+  background: #fff;
+  border: 1px solid var(--ac-paper-line);
+  border-radius: 12px;
+  box-shadow: 0 20px 50px -32px rgba(20,20,15,.25);
+  padding: 44px 48px;      /* giảm từ 52px xuống, đỡ ăn vào chiều rộng chữ */
+  max-width: none;         /* bỏ giới hạn max-width nếu theme có set sẵn */
+  width: 100%;
+}
+
+/* 4. Cho chữ trong card giãn theo, không bị bó hẹp bởi ch-unit */
+.theme-doc-markdown p,
+.theme-doc-markdown li {
+  max-width: none;
+}
+.theme-doc-sidebar-container {
+  background: var(--ac-paper-deep);
+}
+
+.menu__link--active {
+  background: var(--ac-red-tint) !important;
+  color: var(--ac-red-deep) !important;
+  box-shadow: inset 2px 0 0 var(--ac-red);
 }
