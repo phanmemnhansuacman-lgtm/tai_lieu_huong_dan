@@ -30,7 +30,7 @@ const FeatureList = [
     link: 'https://acman.edu.vn/',
     description: (
       <>
-        Chương trình đào tạo sát thực tế như bạn đang làm công việc của một kế toán thực thụ, đồng hàng để bạn tự tin trên con đường làm nghề.
+        Chương trình đào tạo sát thực tế như bạn đang làm công việc của một kế toán thực thụ, đồng hành để bạn tự tin trên con đường làm nghề.
       </>
     ),
   },
