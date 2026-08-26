@@ -1,68 +1,54 @@
-const sidebars = {
-  tutorialSidebar: [
-  
-
+// Hàm dùng chung để tạo cấu trúc sidebar cho từng loại hình doanh nghiệp,
+// chỉ cần đổi `folder` (tên thư mục trong docs/) và `label` (tên hiển thị PHẦN I)
+function buildSidebar(folder, groupLabel) {
+  return [
     {
       type: 'category',
-      label: 'SÁCH KẾ TOÁN MÁY THỜI ĐẠI SỐ',
+      label: groupLabel,
       items: [
 
         {
           type: 'category',
-          label: 'PHẦN I - TỔNG QUAN',
-          items: [
-            'Sach_ke_toan_may_thoi_dai_so/phan-1-tong-quan/1.1-khai-niem',
-            'Sach_ke_toan_may_thoi_dai_so/phan-1-tong-quan/1.2-vai-tro-pmkt',
-            'Sach_ke_toan_may_thoi_dai_so/phan-1-tong-quan/1.3-su-phat-trien',
-            'Sach_ke_toan_may_thoi_dai_so/phan-1-tong-quan/1.4-nguyen-ly-hoat-dong',
-            'Sach_ke_toan_may_thoi_dai_so/phan-1-tong-quan/1.5-quy-dinh-pl',
-            'Sach_ke_toan_may_thoi_dai_so/phan-1-tong-quan/1.6-xu-huong-kt-so',
-            'Sach_ke_toan_may_thoi_dai_so/phan-1-tong-quan/1.7-tcctkt',
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'PHẦN II - HƯỚNG DẪN SỬ DỤNG ACMAN 9.1',
+          label: 'PHẦN I - THIẾT LẬP CHUNG',
           items: [
 
             {
               type: 'category',
-              label: '2.1. Cài đặt và các thiết lập căn bản ACMan 9.1',
+              label: '1.1. Cài đặt và các thiết lập căn bản ACMan 9.1',
               items: [
-                'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.1-cai-dat-va-cac-thiet-lap-can-ban/2.1.1-cai-dat-chuong-trinh-phan-mem-acman-9.1',
-                'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.1-cai-dat-va-cac-thiet-lap-can-ban/2.1.2-thiet-lap-co-so-du-lieu-ke-toan',
+                `${folder}/phan-1-thiet-lap-chung/1.1-cai-dat-va-cac-thiet-lap-can-ban/1.1.1-cai-dat-chuong-trinh-phan-mem-acman-9.1`,
+                `${folder}/phan-1-thiet-lap-chung/1.1-cai-dat-va-cac-thiet-lap-can-ban/1.1.2-thiet-lap-co-so-du-lieu-ke-toan`,
 
                 {
                   type: 'category',
-                  label: '2.1.3. Phân quyền và quản trị dữ liệu',
+                  label: '1.1.3. Phân quyền và quản trị dữ liệu',
                   items: [
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.1-cai-dat-va-cac-thiet-lap-can-ban/2.1.3-phan-quyen-va-quan-tri-du-lieu/2.1.3.1-quan-ly-nguoi-su-dung',
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.1-cai-dat-va-cac-thiet-lap-can-ban/2.1.3-phan-quyen-va-quan-tri-du-lieu/2.1.3.2-thay-doi-mat-khau',
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.1-cai-dat-va-cac-thiet-lap-can-ban/2.1.3-phan-quyen-va-quan-tri-du-lieu/2.1.3.3-nhat-ky-lam-viec',
+                    `${folder}/phan-1-thiet-lap-chung/1.1-cai-dat-va-cac-thiet-lap-can-ban/1.1.3-phan-quyen-va-quan-tri-du-lieu/1.1.3.1-quan-ly-nguoi-su-dung`,
+                    `${folder}/phan-1-thiet-lap-chung/1.1-cai-dat-va-cac-thiet-lap-can-ban/1.1.3-phan-quyen-va-quan-tri-du-lieu/1.1.3.2-thay-doi-mat-khau`,
+                    `${folder}/phan-1-thiet-lap-chung/1.1-cai-dat-va-cac-thiet-lap-can-ban/1.1.3-phan-quyen-va-quan-tri-du-lieu/1.1.3.3-nhat-ky-lam-viec`,
                   ],
                 },
 
-                'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.1-cai-dat-va-cac-thiet-lap-can-ban/2.1.4-tro-giup',
+                `${folder}/phan-1-thiet-lap-chung/1.1-cai-dat-va-cac-thiet-lap-can-ban/1.1.4-tro-giup`,
               ],
             },
 
             {
               type: 'category',
-              label: '2.2. Thiết lập danh mục trên phần mềm',
+              label: '1.2. Thiết lập danh mục trên phần mềm',
               items: [
-                'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.2-thiet-lap-danh-muc-tren-phan-mem/2.2.1-danh-muc-phim-tat',
-                'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.2-thiet-lap-danh-muc-tren-phan-mem/2.2.2-danh-muc-khach-hang',
-                'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.2-thiet-lap-danh-muc-tren-phan-mem/2.2.3-danh-muc-ncc',
+                `${folder}/phan-1-thiet-lap-chung/1.2-thiet-lap-danh-muc-tren-phan-mem/1.2.1-danh-muc-phim-tat`,
+                `${folder}/phan-1-thiet-lap-chung/1.2-thiet-lap-danh-muc-tren-phan-mem/1.2.2-danh-muc-khach-hang`,
+                `${folder}/phan-1-thiet-lap-chung/1.2-thiet-lap-danh-muc-tren-phan-mem/1.2.3-danh-muc-ncc`,
 
                 {
                   type: 'category',
-                  label: '2.2.4. Thiết lập chung',
+                  label: '1.2.4. Thiết lập chung',
                   items: [
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.2-thiet-lap-danh-muc-tren-phan-mem/2.2.4-thiet-lap-chung/2.2.4.1-thiet-lap-danh-so-chung-tu-tu-dong',
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.2-thiet-lap-danh-muc-tren-phan-mem/2.2.4-thiet-lap-chung/2.2.4.2-thiet-lap-ket-chuyen-tu-dong',
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.2-thiet-lap-danh-muc-tren-phan-mem/2.2.4-thiet-lap-chung/2.2.4.3-thiet-lap-dong-bo-ma',
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.2-thiet-lap-danh-muc-tren-phan-mem/2.2.4-thiet-lap-chung/2.2.4.4-thiet-lap-xuat-gia-von',
+                    `${folder}/phan-1-thiet-lap-chung/1.2-thiet-lap-danh-muc-tren-phan-mem/1.2.4-thiet-lap-chung/1.2.4.1-thiet-lap-danh-so-chung-tu-tu-dong`,
+                    `${folder}/phan-1-thiet-lap-chung/1.2-thiet-lap-danh-muc-tren-phan-mem/1.2.4-thiet-lap-chung/1.2.4.2-thiet-lap-ket-chuyen-tu-dong`,
+                    `${folder}/phan-1-thiet-lap-chung/1.2-thiet-lap-danh-muc-tren-phan-mem/1.2.4-thiet-lap-chung/1.2.4.3-thiet-lap-dong-bo-ma`,
+                    `${folder}/phan-1-thiet-lap-chung/1.2-thiet-lap-danh-muc-tren-phan-mem/1.2.4-thiet-lap-chung/1.2.4.4-thiet-lap-xuat-gia-von`,
                   ],
                 },
               ],
@@ -70,157 +56,144 @@ const sidebars = {
 
             {
               type: 'category',
-              label: '2.3. Nguyên tắc nhập liệu trên phần mềm kế toán ACMan 9.1',
+              label: '1.3. Nguyên tắc nhập liệu trên phần mềm kế toán ACMan 9.1',
               link: {
-             type: 'doc',
-              id: 'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.3-nguyen-tac-nhap-lieu/2.3-index',
-       },
+                type: 'doc',
+                id: `${folder}/phan-1-thiet-lap-chung/1.3-nguyen-tac-nhap-lieu/1.3-index`,
+              },
               items: [
-                'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.3-nguyen-tac-nhap-lieu/2.3.1-so-du-dau-ky',
-                'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.3-nguyen-tac-nhap-lieu/2.3.2-cap-nhat-chung-tu-phat-sinh',
+                `${folder}/phan-1-thiet-lap-chung/1.3-nguyen-tac-nhap-lieu/1.3.1-so-du-dau-ky`,
+                `${folder}/phan-1-thiet-lap-chung/1.3-nguyen-tac-nhap-lieu/1.3.2-cap-nhat-chung-tu-phat-sinh`,
 
                 {
                   type: 'category',
-                  label: '2.3.3 Nghiệp vụ tự động',
+                  label: '1.3.3 Nghiệp vụ tự động',
                   items: [
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.3-nguyen-tac-nhap-lieu/2.3.3-nghiep-vu-tu-dong-tren-pm/2.3.3.1-xuat-kho-tu-dong',
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.3-nguyen-tac-nhap-lieu/2.3.3-nghiep-vu-tu-dong-tren-pm/2.3.3.2-phan-bo-chi-phi-chung',
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.3-nguyen-tac-nhap-lieu/2.3.3-nghiep-vu-tu-dong-tren-pm/2.3.3.3-khau-hao-tscd',
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.3-nguyen-tac-nhap-lieu/2.3.3-nghiep-vu-tu-dong-tren-pm/2.3.3.4-phan-bo-cccd',
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.3-nguyen-tac-nhap-lieu/2.3.3-nghiep-vu-tu-dong-tren-pm/2.3.3.5-tinh-gia-thanh',
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.3-nguyen-tac-nhap-lieu/2.3.3-nghiep-vu-tu-dong-tren-pm/2.3.3.6-ket-chuyen-tu-dong',
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.3-nguyen-tac-nhap-lieu/2.3.3-nghiep-vu-tu-dong-tren-pm/2.3.3.7-kiem-soat-so-lieu',
+                    `${folder}/phan-1-thiet-lap-chung/1.3-nguyen-tac-nhap-lieu/1.3.3-nghiep-vu-tu-dong-tren-pm/1.3.3.1-xuat-kho-tu-dong`,
+                    `${folder}/phan-1-thiet-lap-chung/1.3-nguyen-tac-nhap-lieu/1.3.3-nghiep-vu-tu-dong-tren-pm/1.3.3.2-phan-bo-chi-phi-chung`,
+                    `${folder}/phan-1-thiet-lap-chung/1.3-nguyen-tac-nhap-lieu/1.3.3-nghiep-vu-tu-dong-tren-pm/1.3.3.3-khau-hao-tscd`,
+                    `${folder}/phan-1-thiet-lap-chung/1.3-nguyen-tac-nhap-lieu/1.3.3-nghiep-vu-tu-dong-tren-pm/1.3.3.4-phan-bo-cccd`,
+                    `${folder}/phan-1-thiet-lap-chung/1.3-nguyen-tac-nhap-lieu/1.3.3-nghiep-vu-tu-dong-tren-pm/1.3.3.5-tinh-gia-thanh`,
+                    `${folder}/phan-1-thiet-lap-chung/1.3-nguyen-tac-nhap-lieu/1.3.3-nghiep-vu-tu-dong-tren-pm/1.3.3.6-ket-chuyen-tu-dong`,
+                    `${folder}/phan-1-thiet-lap-chung/1.3-nguyen-tac-nhap-lieu/1.3.3-nghiep-vu-tu-dong-tren-pm/1.3.3.7-kiem-soat-so-lieu`,
                   ],
                 },
 
                 {
                   type: 'category',
-                  label: '2.3.4. Chứng từ, sổ kế toán và báo cáo',
+                  label: '1.3.4. Chứng từ, sổ kế toán và báo cáo',
                   items: [
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.3-nguyen-tac-nhap-lieu/2.3.4-chung-tu-so-ke-toan/2.3.4.1-in-chung-tu-ke-toan',
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.3-nguyen-tac-nhap-lieu/2.3.4-chung-tu-so-ke-toan/2.3.4.2-phat-hanh-so-ke-toan',
+                    `${folder}/phan-1-thiet-lap-chung/1.3-nguyen-tac-nhap-lieu/1.3.4-chung-tu-so-ke-toan/1.3.4.1-in-chung-tu-ke-toan`,
+                    `${folder}/phan-1-thiet-lap-chung/1.3-nguyen-tac-nhap-lieu/1.3.4-chung-tu-so-ke-toan/1.3.4.2-phat-hanh-so-ke-toan`,
                   ],
                 },
 
-                'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.3-nguyen-tac-nhap-lieu/2.3.5-bao-cao-tai-chinh',
-                'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.3-nguyen-tac-nhap-lieu/2.3.6-to-khai-thue',
-                'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.3-nguyen-tac-nhap-lieu/2.3.7-cac-ham-thong-minh',
+                `${folder}/phan-1-thiet-lap-chung/1.3-nguyen-tac-nhap-lieu/1.3.5-bao-cao-tai-chinh`,
+                `${folder}/phan-1-thiet-lap-chung/1.3-nguyen-tac-nhap-lieu/1.3.6-to-khai-thue`,
+                `${folder}/phan-1-thiet-lap-chung/1.3-nguyen-tac-nhap-lieu/1.3.7-cac-ham-thong-minh`,
               ],
             },
 
             {
               type: 'category',
-              label: '2.4. Hệ thống phần mềm tích hợp',
+              label: '1.4. Hệ thống phần mềm tích hợp',
               items: [
-                'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.4-he-thong-pm-tich-hop/2.4.1-pm-hddt',
+                `${folder}/phan-1-thiet-lap-chung/1.4-he-thong-pm-tich-hop/1.4.1-pm-hddt`,
 
                 {
                   type: 'category',
-                  label: '2.4.2. Phần mềm tải, import hóa đơn và sao kê ngân hàng',
+                  label: '1.4.2. Phần mềm tải, import hóa đơn và sao kê ngân hàng',
                   items: [
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.4-he-thong-pm-tich-hop/2.4.2-tai-va-ip-hoadon/2.4.2.1-tai-va-ip-hoadon-tct',
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.4-he-thong-pm-tich-hop/2.4.2-tai-va-ip-hoadon/2.4.2.2-tai-va-ip-hoadon-website',
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.4-he-thong-pm-tich-hop/2.4.2-tai-va-ip-hoadon/2.4.2.3-ip-sao-ke-ngan-hang',
+                    `${folder}/phan-1-thiet-lap-chung/1.4-he-thong-pm-tich-hop/1.4.2-tai-va-ip-hoadon/1.4.2.1-tai-va-ip-hoadon-tct`,
+                    `${folder}/phan-1-thiet-lap-chung/1.4-he-thong-pm-tich-hop/1.4.2-tai-va-ip-hoadon/1.4.2.2-tai-va-ip-hoadon-website`,
+                    `${folder}/phan-1-thiet-lap-chung/1.4-he-thong-pm-tich-hop/1.4.2-tai-va-ip-hoadon/1.4.2.3-ip-sao-ke-ngan-hang`,
                   ],
                 },
 
                 {
                   type: 'category',
-                  label: '2.4.3. Phần mềm nhân sự và tiền lương',
+                  label: '1.4.3. Phần mềm nhân sự và tiền lương',
                   items: [
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.4-he-thong-pm-tich-hop/2.4.3-pm-nhan-su/2.4.3.1-co-che-chinh-sach',
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.4-he-thong-pm-tich-hop/2.4.3-pm-nhan-su/2.4.3.2-mo-ta-cong-viec',
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.4-he-thong-pm-tich-hop/2.4.3-pm-nhan-su/2.4.3.3-thong-tin-nhan-su',
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.4-he-thong-pm-tich-hop/2.4.3-pm-nhan-su/2.4.3.4-thiet-lap-chinh-sach-tien-luong',
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.4-he-thong-pm-tich-hop/2.4.3-pm-nhan-su/2.4.3.5-bang-cham-cong',
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.4-he-thong-pm-tich-hop/2.4.3-pm-nhan-su/2.4.3.6-bang-tinh-luong',
-                    'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.4-he-thong-pm-tich-hop/2.4.3-pm-nhan-su/2.4.3.7-tai-khoan-tich-hop-luong',
+                    `${folder}/phan-1-thiet-lap-chung/1.4-he-thong-pm-tich-hop/1.4.3-pm-nhan-su/1.4.3.1-co-che-chinh-sach`,
+                    `${folder}/phan-1-thiet-lap-chung/1.4-he-thong-pm-tich-hop/1.4.3-pm-nhan-su/1.4.3.2-mo-ta-cong-viec`,
+                    `${folder}/phan-1-thiet-lap-chung/1.4-he-thong-pm-tich-hop/1.4.3-pm-nhan-su/1.4.3.3-thong-tin-nhan-su`,
+                    `${folder}/phan-1-thiet-lap-chung/1.4-he-thong-pm-tich-hop/1.4.3-pm-nhan-su/1.4.3.4-thiet-lap-chinh-sach-tien-luong`,
+                    `${folder}/phan-1-thiet-lap-chung/1.4-he-thong-pm-tich-hop/1.4.3-pm-nhan-su/1.4.3.5-bang-cham-cong`,
+                    `${folder}/phan-1-thiet-lap-chung/1.4-he-thong-pm-tich-hop/1.4.3-pm-nhan-su/1.4.3.6-bang-tinh-luong`,
+                    `${folder}/phan-1-thiet-lap-chung/1.4-he-thong-pm-tich-hop/1.4.3-pm-nhan-su/1.4.3.7-tai-khoan-tich-hop-luong`,
                   ],
                 },
               ],
             },
+
             {
-  type: 'category',
-  label: '2.5. Phần mềm ACMan khác',
-  link: {
-    type: 'doc',
-    id: 'Sach_ke_toan_may_thoi_dai_so/phan-2-huong-dan-su-dung/2.5-phan-mem-acman-khac',
-  },
-  items: [],
-},
+              type: 'category',
+              label: '1.5. Phần mềm ACMan khác',
+              link: {
+                type: 'doc',
+                id: `${folder}/phan-1-thiet-lap-chung/1.5-phan-mem-acman-khac`,
+              },
+              items: [],
+            },
 
           ],
         },
 
         {
           type: 'category',
-          label: 'PHẦN III - THỰC HÀNH QUA BÀI TẬP MẪU',
+          label: 'PHẦN II - HƯỚNG DẪN NHẬP LIỆU VÀ HẠCH TOÁN',
           items: [
-            'Sach_ke_toan_may_thoi_dai_so/phan-3-thuc-hanh/3.1-de-bai',
-            'Sach_ke_toan_may_thoi_dai_so/phan-3-thuc-hanh/3.2-dinh-khoan',
+            `${folder}/phan-2-thuc-hanh/2.1-dinh-khoan`,
 
             {
               type: 'category',
-              label: '3.3 Thực hành qua bài tập mẫu',
+              label: '2.2 Hướng dẫn nhập liệu và hạch toán',
               items: [
-                'Sach_ke_toan_may_thoi_dai_so/phan-3-thuc-hanh/3.3-thuc-hanh-qua-bt-mau/3.3.1-tao-co-so-du-lieu',
-                'Sach_ke_toan_may_thoi_dai_so/phan-3-thuc-hanh/3.3-thuc-hanh-qua-bt-mau/3.3.2-nhap-sodu-dau-ky',
-                'Sach_ke_toan_may_thoi_dai_so/phan-3-thuc-hanh/3.3-thuc-hanh-qua-bt-mau/3.3.3-nhap-nghiep-vu-phat-sinh',
+                `${folder}/phan-2-thuc-hanh/2.2-huong-dan-nhap-lieu/2.2.1-tao-co-so-du-lieu`,
+                `${folder}/phan-2-thuc-hanh/2.2-huong-dan-nhap-lieu/2.2.2-nhap-sodu-dau-ky`,
+                `${folder}/phan-2-thuc-hanh/2.2-huong-dan-nhap-lieu/2.2.3-nhap-nghiep-vu-phat-sinh`,
               ],
             },
 
             {
               type: 'category',
-              label: '3.4. Phát hành sổ kế toán',
+              label: '2.3. Phát hành sổ kế toán',
               items: [
-                'Sach_ke_toan_may_thoi_dai_so/phan-3-thuc-hanh/3.4-phat-hanh/3.4.1-in-so-ketoan',
-                'Sach_ke_toan_may_thoi_dai_so/phan-3-thuc-hanh/3.4-phat-hanh/3.4.2-phat-hanh-sokt',
+                `${folder}/phan-2-thuc-hanh/2.3-phat-hanh/2.3.1-in-so-ketoan`,
+                `${folder}/phan-2-thuc-hanh/2.3-phat-hanh/2.3.2-phat-hanh-sokt`,
               ],
             },
 
-            'Sach_ke_toan_may_thoi_dai_so/phan-3-thuc-hanh/3.5-phat-hanh-bctc',
-            'Sach_ke_toan_may_thoi_dai_so/phan-3-thuc-hanh/3.6-in-bao-cao-thue',
-          ],
-        },
-
-        {
-          type: 'category',
-          label: 'PHẦN IV - THỰC HÀNH THEO MÔ HÌNH DOANH NGHIỆP',
-          items: [
-            'Sach_ke_toan_may_thoi_dai_so/phan-4-thuc-hanh-mo-hinh-doanh-nghiep/4.1-bt-dn-xaydung',
-            'Sach_ke_toan_may_thoi_dai_so/phan-4-thuc-hanh-mo-hinh-doanh-nghiep/4.2-bt-dn-thuongmai',
-            'Sach_ke_toan_may_thoi_dai_so/phan-4-thuc-hanh-mo-hinh-doanh-nghiep/4.3-bt-dn-dichvu',
+            `${folder}/phan-2-thuc-hanh/2.4-phat-hanh-bctc`,
+            `${folder}/phan-2-thuc-hanh/2.5-in-bao-cao-thue`,
           ],
         },
 
         {
           type: 'doc',
-          id: 'Sach_ke_toan_may_thoi_dai_so/phan-5-cau-hoi-on-tap/cau-hoi',
-          label: 'PHẦN V - CÂU HỎI ÔN TẬP',
-          
+          id: `${folder}/phan-3-xu-ly-loi/xu-ly-loi`,
+          label: 'PHẦN III - XỬ LÝ LỖI',
         },
 
-        {
-          type: 'doc',
-          id: 'Sach_ke_toan_may_thoi_dai_so/phan-6-xu-ly-loi/xu-ly-loi',
-          label: 'PHẦN VI - XỬ LÝ LỖI',
-        
-        },
         {
           type: 'category',
-          label: 'PHẦN VII - HỆ THỐNG TÀI KHOẢN',
+          label: 'PHẦN IV - HỆ THỐNG TÀI KHOẢN',
           items: [
-            'Sach_ke_toan_may_thoi_dai_so/phan-7-he-thong-tai-khoan/7.1-hd-tra-cuu-tai-khoan-khi-hach-toan',
-
-            'Sach_ke_toan_may_thoi_dai_so/phan-7-he-thong-tai-khoan/7.2-bang-tai-khoan-tt99'
+            `${folder}/phan-4-he-thong-tai-khoan/4.1-hd-tra-cuu-tai-khoan-khi-hach-toan`,
+            `${folder}/phan-4-he-thong-tai-khoan/4.2-bang-tai-khoan-tt99`,
           ],
         },
 
       ],
     },
-  ],
-};
-  
+  ];
+}
 
+const sidebars = {
+  tutorialSidebar: buildSidebar('doanh_nghiep_thuong_mai', 'DOANH NGHIỆP THƯƠNG MẠI'),
+  sanXuatSidebar: buildSidebar('doanh_nghiep_san_xuat', 'DOANH NGHIỆP SẢN XUẤT'),
+  xayDungSidebar: buildSidebar('doanh_nghiep_xay_dung', 'DOANH NGHIỆP XÂY DỰNG'),
+  dichVuSidebar: buildSidebar('doanh_nghiep_dich_vu', 'DOANH NGHIỆP DỊCH VỤ'),
+};
 
 module.exports = sidebars;

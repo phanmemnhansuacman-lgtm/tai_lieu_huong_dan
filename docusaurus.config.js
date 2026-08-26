@@ -79,7 +79,25 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Hướng dẫn sử dụng',
+            label: 'Thương mại',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'sanXuatSidebar',
+            position: 'left',
+            label: 'Sản xuất',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'xayDungSidebar',
+            position: 'left',
+            label: 'Xây dựng',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'dichVuSidebar',
+            position: 'left',
+            label: 'Dịch vụ',
           },
         ],
       },
@@ -100,8 +118,10 @@ const config = {
       title: 'Liên hệ',
       items: [
         {
-          label: 'Website',
-          href: 'https://acman.vn',
+          html: '📍Phòng 1503, Tầng 15, Tòa nhà Vinaconex Diamond Số 459C Bạch Mai, Phường Bạch Mai, Thành phố Hà Nội.',
+        },
+        {
+          html : '📞 Điện thoại: 0966 04 34 34',
         },
       ],
     },

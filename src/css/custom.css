@@ -4,7 +4,7 @@
  * work well for content-centric websites.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 /* You can override the default Infima variables here. */
 @import "./centered-doc-table.css";
 :root {
@@ -26,6 +26,8 @@
   --ac-paper-deep: #F0EFEA;
   --ac-paper-line: #E4E3DD;
   --ac-graphite: #6E6C64;
+  --ac-font-display: "Inter", Arial, sans-serif;
+  --ac-font-mono: "Inter", Arial, sans-serif;
 }
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
@@ -700,6 +702,26 @@ body {
     radial-gradient(ellipse 900px 420px at 15% -10%, var(--ac-red-tint) 0%, transparent 55%),
     radial-gradient(ellipse 700px 380px at 100% 0%, var(--ac-paper-deep) 0%, transparent 50%),
     var(--ac-paper);
+  background-size: 140% 140%, 140% 140%, 100% 100%;
+  animation: acBgDrift 18s ease-in-out infinite;
+}
+
+@keyframes acBgDrift {
+  0% {
+    background-position: 0% 0%, 100% 0%, 0 0;
+  }
+  50% {
+    background-position: 10% 6%, 90% 8%, 0 0;
+  }
+  100% {
+    background-position: 0% 0%, 100% 0%, 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
 }
 /* 1. Nới khung chứa tổng của trang docs (mặc định Docusaurus giới hạn ~1140px) */
 .container {
@@ -738,4 +760,475 @@ body {
   background: var(--ac-red-tint) !important;
   color: var(--ac-red-deep) !important;
   box-shadow: inset 2px 0 0 var(--ac-red);
+}
+
+/* ==========================
+   TRANG CHỦ ACMan — Hero + 4 card nổi
+   ========================== */
+
+.acHomeMain {
+  overflow: visible;
+}
+
+/* HERO — đã nới ra để không lọt hết vào 1 màn hình, đạt tổng ~910-930px */
+.acHero {
+  position: relative;
+  min-height: 0;
+  padding: 56px 5vw 76px;
+  margin: 0;
+  text-align: left;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 620px 420px at 78% 40%, rgba(251, 205, 205, 0.38) 0%, transparent 68%),
+    radial-gradient(ellipse 700px 420px at 8% 30%, rgba(255, 232, 232, 0.8) 0%, transparent 72%),
+    linear-gradient(110deg, #fff 0%, #fffafa 48%, #fff5f5 100%);
+}
+
+/* Decorative glow */
+.acHero::before,
+.acHero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(2px);
+}
+
+.acHero::before {
+  width: 520px;
+  height: 520px;
+  left: 38%;
+  top: -260px;
+  background: radial-gradient(circle, rgba(195, 30, 44, 0.06), transparent 68%);
+}
+
+.acHero::after {
+  width: 420px;
+  height: 420px;
+  right: 18%;
+  bottom: -260px;
+  background: radial-gradient(circle, rgba(195, 30, 44, 0.08), transparent 68%);
+}
+
+.acHeroInner {
+  position: relative;
+  z-index: 2;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(480px, 0.98fr);
+  align-items: center;
+  gap: clamp(20px, 4vw, 70px);
+}
+
+/* LEFT */
+.acHeroContent {
+  max-width: 720px;
+}
+
+.acEyebrow {
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ac-red);
+}
+
+.acHeroTitle {
+  margin: 0 0 14px;
+  font-family: var(--ac-font-display);
+  font-size: clamp(1.75rem, 2.6vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.22;
+  letter-spacing: -0.03em;
+  color: #151515;
+}
+
+.acGlow {
+  color: var(--ac-red);
+  text-shadow:
+    0 5px 18px rgba(195, 30, 44, 0.14),
+    0 0 30px rgba(195, 30, 44, 0.08);
+}
+
+.acHeroSubtitle {
+  max-width: 650px;
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.acSearchBox {
+  position: relative;
+  width: min(100%, 580px);
+  height: 48px;
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
+  padding: 0 16px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #ece7e5;
+  border-radius: 999px;
+  box-shadow:
+    0 12px 35px rgba(40, 20, 20, 0.08),
+    0 2px 5px rgba(40, 20, 20, 0.03);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.acSearchBox:hover,
+.acSearchBox:focus-within {
+  transform: translateY(-1px);
+  box-shadow:
+    0 16px 40px rgba(40, 20, 20, 0.1),
+    0 0 0 3px rgba(195, 30, 44, 0.06);
+}
+
+.acSearchIcon {
+  flex: 0 0 auto;
+  width: 19px;
+  height: 19px;
+  margin-right: 10px;
+  color: #444;
+}
+
+.acSearchInput {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #222;
+  font: inherit;
+  font-size: 14px;
+}
+
+.acSearchInput::placeholder {
+  color: #777;
+}
+
+.acSearchExample {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: #666;
+}
+
+/* RIGHT — ACMan software preview, nghiêng nhiều hơn để tạo cảm giác 3D rõ hơn */
+.acHeroVisual {
+  position: relative;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: -40px;
+  perspective: 1400px;
+}
+
+.acProductFrame {
+  position: relative;
+  width: min(980px, 100%);
+  padding: 8px;
+  border: 1px solid rgba(195, 30, 44, 0.16);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 30px 65px rgba(100, 25, 25, 0.18),
+    0 8px 25px rgba(100, 25, 25, 0.08);
+  transform: rotateX(6deg) rotateY(-10deg) rotate(2.5deg) translateY(4px);
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.acProductFrame:hover {
+  transform: rotateX(2deg) rotateY(-4deg) rotate(0.5deg) translateY(-6px) scale(1.015);
+  box-shadow:
+    0 38px 75px rgba(100, 25, 25, 0.2),
+    0 10px 30px rgba(100, 25, 25, 0.1);
+}
+
+.acProductImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  border: 0 !important;
+  border-radius: 10px;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.acVisualIcon {
+  position: absolute;
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(195, 30, 44, 0.16);
+  box-shadow: 0 10px 25px rgba(50, 20, 20, 0.12);
+  font-size: 20px;
+}
+
+.acVisualIconBook {
+  left: -20px;
+  top: 28%;
+  color: var(--ac-red);
+}
+
+.acVisualIconChart {
+  right: -12px;
+  bottom: 12%;
+  color: #4285f4;
+}
+
+/* 4 CARDS — đổi margin âm thành dương để giãn ra khỏi hero */
+.acGridWrap {
+  position: relative;
+  z-index: 10;
+  max-width: 1100px;
+  margin: -70px auto 0;
+  padding: 0 32px 56px;
+}
+
+.acGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.acCard {
+  min-height: 260px;
+  padding: 24px 22px 18px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid #e7e3e0;
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  box-shadow:
+    0 14px 35px rgba(25, 20, 15, 0.08),
+    0 2px 8px rgba(25, 20, 15, 0.03);
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    border-color 0.28s ease;
+}
+
+.acCard:hover {
+  text-decoration: none;
+  transform: translateY(-8px);
+  border-color: rgba(195, 30, 44, 0.38);
+  box-shadow:
+    0 22px 45px rgba(25, 20, 15, 0.12),
+    0 0 30px rgba(195, 30, 44, 0.08);
+}
+
+.acCardIndex {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--ac-red);
+}
+
+.acCardIcon {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0 12px;
+  border-radius: 11px;
+  background: #8d1322;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  box-shadow: 0 8px 18px rgba(141, 19, 34, 0.18);
+}
+
+.acCardTitle {
+  font-family: var(--ac-font-display);
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #171717;
+}
+
+.acCardDesc {
+  font-size: 12.5px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  flex: 1;
+}
+
+.acCardLink {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ac-red-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.acCardLink::after {
+  content: "→";
+  transition: transform 0.18s ease;
+}
+
+.acCard:hover .acCardLink::after {
+  transform: translateX(4px);
+}
+
+/* Dark mode */
+[data-theme='dark'] .acHero {
+  background:
+    radial-gradient(ellipse 620px 420px at 78% 40%, rgba(130, 30, 40, 0.18) 0%, transparent 68%),
+    #1b1717;
+}
+
+[data-theme='dark'] .acHeroTitle,
+[data-theme='dark'] .acCardTitle {
+  color: #f4eee5;
+}
+
+[data-theme='dark'] .acHeroSubtitle,
+[data-theme='dark'] .acSearchExample,
+[data-theme='dark'] .acCardDesc {
+  color: #c9c1bd;
+}
+
+[data-theme='dark'] .acSearchBox,
+[data-theme='dark'] .acCard {
+  background: #241d1d;
+  border-color: #3b2c2c;
+}
+
+[data-theme='dark'] .acSearchInput {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .acHero {
+    min-height: 380px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .acHeroInner {
+    grid-template-columns: minmax(0, 1fr) minmax(380px, 0.9fr);
+    gap: 24px;
+  }
+
+  .acHeroTitle {
+    font-size: clamp(1.7rem, 3.4vw, 2.5rem);
+  }
+
+  .acGrid {
+    gap: 16px;
+  }
+
+  .acCard {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}
+
+@media (max-width: 900px) {
+  .acHero {
+    min-height: auto;
+    padding: 36px 28px 70px;
+  }
+
+  .acHeroInner {
+    grid-template-columns: 1fr;
+  }
+
+  .acHeroContent {
+    max-width: 760px;
+  }
+
+  .acHeroVisual {
+    max-width: 720px;
+    margin: 8px auto 0;
+  }
+
+  .acProductFrame {
+    width: 100%;
+  }
+
+  .acGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .acGridWrap {
+    margin-top: -40px;
+  }
+}
+
+@media (max-width: 620px) {
+  .acHero {
+    padding: 30px 18px 55px;
+  }
+
+  .acEyebrow {
+    font-size: 11px;
+  }
+
+  .acHeroTitle {
+    font-size: 1.9rem;
+    line-height: 1.12;
+  }
+
+  .acHeroSubtitle {
+    font-size: 14.5px;
+  }
+
+  .acSearchBox {
+    height: 50px;
+    padding: 0 16px;
+  }
+
+  .acProductFrame {
+    padding: 6px;
+    border-radius: 13px;
+    transform: none;
+  }
+
+  .acProductImage {
+    max-height: 230px;
+  }
+
+  .acVisualIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .acVisualIconBook {
+    left: -5px;
+  }
+
+  .acVisualIconChart {
+    right: -5px;
+  }
+
+  .acGridWrap {
+    margin-top: -28px;
+    padding: 0 18px 40px;
+  }
+
+  .acGrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .acCard {
+    min-height: 0;
+    padding: 26px 22px 22px;
+  }
 }
