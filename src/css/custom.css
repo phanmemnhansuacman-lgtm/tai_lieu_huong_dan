@@ -727,6 +727,9 @@ body {
 .container {
   max-width: 1400px !important;
 }
+main .container {
+    max-width: 100% !important;
+}
 
 /* 2. Nới cột nội dung chính, thu hẹp khoảng trống 2 bên do grid cột để lại */
 .docItemCol_ {
@@ -1230,5 +1233,26 @@ body {
   .acCard {
     min-height: 0;
     padding: 26px 22px 22px;
+  }
+}
+.theme-doc-markdown {
+  max-width: 100% !important;
+}
+.theme-doc-markdown table.centered-doc-table {
+  display: table !important;
+  width: 70% !important;
+}
+/* Tùy chỉnh ô tìm kiếm - to hơn và dùng font Inter */
+.navbar__search-input {
+  width: 280px;
+  height: 42px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 15px;
+  border-radius: 8px;
+}
+
+@media (min-width: 997px) {
+  .navbar__search-input {
+    width: 320px;
   }
 }

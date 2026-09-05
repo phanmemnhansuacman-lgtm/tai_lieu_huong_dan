@@ -83,10 +83,6 @@ function HomepageHero() {
           </p>
 
           <SearchBox />
-
-          <p className="acSearchExample">
-            Ví dụ: Hạch toán tiền lương, nhập hóa đơn đầu vào, kết chuyển cuối kỳ...
-          </p>
         </div>
 
         <div className="acHeroVisual">

@@ -1,8 +1,7 @@
 .shortcut-table{
-    width:70%;
-    margin:30px auto;
+    width:100%;
+    margin:30px 0;
     border-collapse:collapse;
-    table-layout:fixed;
     font-size:15px;
     background:#fff;
 }
@@ -51,4 +50,8 @@
 .shortcut-table tbody tr:hover{
 
     background:#fff3f3;
+}
+.theme-doc-markdown table.shortcut-table {
+  display: table !important;
+  width: 80% !important;
 }
