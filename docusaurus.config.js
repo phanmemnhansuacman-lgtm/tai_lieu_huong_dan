@@ -106,15 +106,7 @@ const config = {
   style: 'dark',
   copyright: `Copyright © ${new Date().getFullYear()} ACMan`,
   links: [
-    {
-      title: 'Tài liệu',
-      items: [
-        {
-          label: 'Hướng dẫn sử dụng',
-          to: '/docs/Sach_ke_toan_may_thoi_dai_so/phan-1-tong-quan/1.1-khai-niem',
-        },
-      ],
-    },
+    
     {
       title: 'Liên hệ',
       items: [
