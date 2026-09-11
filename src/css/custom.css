@@ -1269,3 +1269,74 @@ main .container {
   border-radius: 999px;
   vertical-align: middle;
 }
+/* Thêm vào cuối custom.css — chỉnh kích thước icon SVG thay cho emoji */
+
+.acCardIcon svg {
+  width: 20px;
+  height: 20px;
+  stroke: #fff;
+  fill: none;
+}
+
+.acVisualIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.acVisualIconChart svg {
+  width: 22px;
+  height: 22px;
+}
+.acTrustRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 28px;
+  margin: 8px 0 28px;
+  border: none;
+  padding: 0;
+}
+ 
+.acTrustItem {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 19px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--ac-red-accent);
+  text-shadow:
+    0 0 3px rgba(194, 92, 82, 0.7),
+    0 0 8px rgba(194, 92, 82, 0.45),
+    0 0 18px rgba(194, 92, 82, 0.3),
+    0 0 32px rgba(194, 92, 82, 0.18);
+}
+ 
+.acTrustItem strong {
+  font-size: 27px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--ac-red-deep);
+  text-shadow:
+    0 0 3px rgba(122, 36, 34, 0.6),
+    0 0 9px rgba(122, 36, 34, 0.4),
+    0 0 20px rgba(122, 36, 34, 0.25);
+}
+ 
+.acTrustDivider {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--ac-red-accent);
+  box-shadow:
+    0 0 6px rgba(194, 92, 82, 0.6),
+    0 0 12px rgba(194, 92, 82, 0.35);
+}
+ 
+@media (max-width: 480px) {
+  .acTrustRow {
+    flex-wrap: wrap;
+    gap: 10px 22px;
+  }
+}
