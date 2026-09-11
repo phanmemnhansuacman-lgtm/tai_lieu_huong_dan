@@ -90,31 +90,29 @@ const config = {
           src: 'img/acman-logo-1.png',
         },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Thương mại',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'sanXuatSidebar',
-            position: 'left',
-            label: 'Sản xuất',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'xayDungSidebar',
-            position: 'left',
-            label: 'Xây dựng',
-          },
-          {
-            type: 'docSidebar',
-            sidebarId: 'dichVuSidebar',
-            position: 'left',
-            label: 'Dịch vụ',
-          },
-        ],
+  {
+    type: 'docSidebar',
+    sidebarId: 'tutorialSidebar',
+    position: 'left',
+    label: 'Thương mại',
+  },
+  {
+    to: '/coming-soon?muc=Sản xuất',
+    position: 'left',
+    label: 'Sản xuất',
+  },
+  {
+    to: '/coming-soon?muc=Xây dựng',
+    position: 'left',
+    label: 'Xây dựng',
+  },
+  {
+    type: 'docSidebar',
+    sidebarId: 'dichVuSidebar',
+    position: 'left',
+    label: 'Dịch vụ',
+  },
+],
       },
       footer: {
   style: 'dark',

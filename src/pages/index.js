@@ -1,7 +1,9 @@
+import {useState, useEffect} from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
+import BannerChaomung from '@site/src/components/BannerChaomung';
 
 const docTypes = [
   {
@@ -12,18 +14,19 @@ const docTypes = [
     href: '/docs/doanh_nghiep_thuong_mai/phan-1-thiet-lap-chung/1.1-cai-dat-va-cac-thiet-lap-can-ban/1.1.1-cai-dat-chuong-trinh-phan-mem-acman-9.1',
   },
   {
-    index: '02',
-    icon: '⚙️',
-    title: 'Sản xuất',
-    desc: 'Giá thành sản phẩm, định mức nguyên vật liệu, chi phí sản xuất dở dang và nhập kho thành phẩm.',
-    href: '/docs/doanh_nghiep_san_xuat/phan-1-thiet-lap-chung/1.1-cai-dat-va-cac-thiet-lap-can-ban/1.1.1-cai-dat-chuong-trinh-phan-mem-acman-9.1',
-  },
+  index: '02',
+  icon: '⚙️',
+  title: 'Sản xuất',
+  desc: 'Giá thành sản phẩm, định mức nguyên vật liệu, chi phí sản xuất dở dang và nhập kho thành phẩm.',
+  href: '/coming-soon?muc=Sản xuất',
+  comingSoon: true,
+},
   {
     index: '03',
     icon: '🏗️',
     title: 'Xây dựng',
     desc: 'Hạch toán theo công trình, chi phí dở dang xây lắp, nghiệm thu và quyết toán từng hạng mục.',
-    href: '/docs/doanh_nghiep_xay_dung/phan-1-thiet-lap-chung/1.1-cai-dat-va-cac-thiet-lap-can-ban/1.1.1-cai-dat-chuong-trinh-phan-mem-acman-9.1',
+    href: '/coming-soon?muc=Xây dựng',
   },
   {
     index: '04',
@@ -34,7 +37,55 @@ const docTypes = [
   },
 ];
 
+const TYPEWRITER_TEXT = 'Chúc bạn trải nghiệm tốt với PM ACMan';
+
+function useTypewriter(text, {typingSpeed = 70, deletingSpeed = 35, pauseAfterType = 1400, pauseAfterDelete = 500} = {}) {
+  const [displayed, setDisplayed] = useState('');
+
+  useEffect(() => {
+    let charIndex = 0;
+    let isDeleting = false;
+    let timeoutId;
+
+    function tick() {
+      if (!isDeleting) {
+        charIndex += 1;
+        setDisplayed(text.slice(0, charIndex));
+
+        if (charIndex === text.length) {
+          timeoutId = setTimeout(() => {
+            isDeleting = true;
+            tick();
+          }, pauseAfterType);
+          return;
+        }
+        timeoutId = setTimeout(tick, typingSpeed);
+      } else {
+        charIndex -= 1;
+        setDisplayed(text.slice(0, charIndex));
+
+        if (charIndex === 0) {
+          timeoutId = setTimeout(() => {
+            isDeleting = false;
+            tick();
+          }, pauseAfterDelete);
+          return;
+        }
+        timeoutId = setTimeout(tick, deletingSpeed);
+      }
+    }
+
+    timeoutId = setTimeout(tick, typingSpeed);
+
+    return () => clearTimeout(timeoutId);
+  }, [text, typingSpeed, deletingSpeed, pauseAfterType, pauseAfterDelete]);
+
+  return displayed;
+}
+
 function SearchBox() {
+  const typedPlaceholder = useTypewriter(TYPEWRITER_TEXT);
+
   return (
     <div className="acSearchBox">
       <svg
@@ -53,7 +104,7 @@ function SearchBox() {
       <input
         className="acSearchInput"
         type="search"
-        placeholder="Bạn đang cần tìm hướng dẫn gì?"
+        placeholder={typedPlaceholder}
         aria-label="Tìm kiếm hướng dẫn"
       />
     </div>
@@ -121,9 +172,14 @@ function DocTypeGrid() {
           <Link key={doc.index} to={doc.href} className="acCard">
             <div className="acCardIndex">{doc.index}</div>
             <div className="acCardIcon">{doc.icon}</div>
-            <div className="acCardTitle">{doc.title}</div>
+            <div className="acCardTitle">
+              {doc.title}
+              {doc.comingSoon && <span className="acCardBadge">Sắp ra mắt</span>}
+            </div>
             <div className="acCardDesc">{doc.desc}</div>
-            <div className="acCardLink">Xem tài liệu</div>
+            <div className="acCardLink">
+              {doc.comingSoon ? 'Sắp ra mắt' : 'Xem tài liệu'}
+            </div>
           </Link>
         ))}
       </div>
@@ -141,6 +197,7 @@ export default function Home() {
       <main className="acHomeMain">
         <HomepageHero />
         <DocTypeGrid />
+        <BannerChaomung />
       </main>
     </Layout>
   );

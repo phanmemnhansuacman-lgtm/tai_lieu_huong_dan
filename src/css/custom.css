@@ -9,35 +9,37 @@
 @import "./centered-doc-table.css";
 :root {
 --ifm-font-family-base: "Inter", Arial, sans-serif;
-  --ifm-color-primary: #852e2e;
-  --ifm-color-primary-dark: #9c2f2f;
-  --ifm-color-primary-darker: #881a1a;
-  --ifm-color-primary-darkest: #771b1b;
-  --ifm-color-primary-light: #cf6464;
-  --ifm-color-primary-lighter: #df4545;
-  --ifm-color-primary-lightest: #3f1616;
+  --ifm-color-primary: #A3302E;
+  --ifm-color-primary-dark: #8A2826;
+  --ifm-color-primary-darker: #7A2422;
+  --ifm-color-primary-darkest: #5C1B1A;
+  --ifm-color-primary-light: #C25C52;
+  --ifm-color-primary-lighter: #D97F76;
+  --ifm-color-primary-lightest: #3A1211;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-container-width-xl: 1140px;
-  --ac-red: #C31E2C;
-  --ac-red-tint: #FBEAEA;
-  --ac-red-deep: #7A1220;
-  --ac-paper: #F7F7F5;
-  --ac-paper-deep: #F0EFEA;
-  --ac-paper-line: #E4E3DD;
-  --ac-graphite: #6E6C64;
+  --ac-red: #A3302E;
+  --ac-red-accent: #C25C52;
+  --ac-red-tint: #F5EDEC;
+  --ac-red-deep: #7A2422;
+  --ac-gradient: linear-gradient(135deg, #A3302E 0%, #C25C52 55%, #5C6470 100%);
+  --ac-paper: #F6F7F8;
+  --ac-paper-deep: #EDEFF1;
+  --ac-paper-line: #E1E4E7;
+  --ac-graphite: #5C6470;
   --ac-font-display: "Inter", Arial, sans-serif;
   --ac-font-mono: "Inter", Arial, sans-serif;
 }
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #852e2e;
-  --ifm-color-primary-dark: #9c2f2f;
-  --ifm-color-primary-darker: #881a1a;
-  --ifm-color-primary-darkest: #771b1b;
-  --ifm-color-primary-light: #cf6464;
-  --ifm-color-primary-lighter: #df4545;
-  --ifm-color-primary-lightest: #3f1616;
+  --ifm-color-primary: #A3302E;
+  --ifm-color-primary-dark: #8A2826;
+  --ifm-color-primary-darker: #7A2422;
+  --ifm-color-primary-darkest: #5C1B1A;
+  --ifm-color-primary-light: #C25C52;
+  --ifm-color-primary-lighter: #D97F76;
+  --ifm-color-primary-lightest: #3A1211;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 /* Đổi font toàn bộ website sang Inter */ 
@@ -241,7 +243,7 @@ body,
 }
 
 .account-table th {
-background:#1f4e79;
+background: var(--ac-red);
 color:white;
 text-align:center;
 padding:10px;
@@ -309,7 +311,7 @@ text-align:left;
 
     border:1px solid #e5e7eb;
 
-    border-left:6px solid #b52727;
+    border-left:6px solid var(--ac-red);
 
     box-shadow:0 8px 24px rgba(0,0,0,.06);
 
@@ -319,9 +321,9 @@ text-align:left;
 .legal-card:hover{
     transform:translateY(-6px);
 
-    border-left-color:#b52727;
+    border-left-color:var(--ac-red);
 
-    box-shadow:0 16px 36px rgba(22,119,255,.18);
+    box-shadow:0 16px 36px rgba(163, 48, 46,.18);
 }
 
 .legal-icon{
@@ -337,7 +339,7 @@ text-align:left;
 
     font-size:30px;
 
-    background:#eef6ff;
+    background:var(--ac-red-tint);
 
     border-radius:50%;
 }
@@ -355,7 +357,7 @@ text-align:left;
 
     font-weight:700;
 
-    color:#b52727;
+    color:var(--ac-red);
 }
 
 .legal-date{
@@ -366,9 +368,9 @@ text-align:left;
 
     padding:4px 12px;
 
-    background:#f2f8ff;
+    background:var(--ac-red-tint);
 
-    color:#b52727;
+    color:var(--ac-red);
 
     border-radius:20px;
 
@@ -402,7 +404,7 @@ text-align:left;
 
     border-radius:18px;
 
-    border-left:6px solid #c62828;
+    border-left:6px solid var(--ac-red);
 
     box-shadow:0 10px 28px rgba(0,0,0,.08);
 }
@@ -425,7 +427,7 @@ text-align:left;
 
     border-radius:50%;
 
-    background:#fdf1f1;
+    background:var(--ac-red-tint);
 
     display:flex;
     justify-content:center;
@@ -440,7 +442,7 @@ text-align:left;
 
     margin:0;
 
-    color:#c62828;
+    color:var(--ac-red);
 
     font-size:24px;
 
@@ -476,7 +478,7 @@ text-align:left;
 
 .regulation-list strong{
 
-    color:#c62828;
+    color:var(--ac-red);
 }
 .feature-wrapper{
 
@@ -515,7 +517,7 @@ text-align:left;
 
     background:#fff;
 
-    border:2px solid #d32f2f;
+    border:2px solid var(--ac-red);
 
     border-radius:50%;
 
@@ -539,7 +541,7 @@ text-align:left;
 
     transform:scale(1.05);
 
-    box-shadow:0 16px 35px rgba(211,47,47,.20);
+    box-shadow:0 16px 35px rgba(163, 48, 46,.20);
 }
 
 .feature-icon{
@@ -573,7 +575,7 @@ text-align:left;
 
     border-radius:50%;
 
-    background:#d32f2f;
+    background:var(--ac-red);
 
     color:#fff;
 
@@ -587,7 +589,7 @@ text-align:left;
 
     border:4px solid #fff;
 
-    box-shadow:0 4px 12px rgba(211,47,47,.35);
+    box-shadow:0 4px 12px rgba(163, 48, 46,.35);
 }
 
 /* Mobile */
@@ -672,12 +674,12 @@ transform:none;
 }
 
 .navbar__link:hover {
-  background: rgba(133, 46, 46, 0.08);
-  color: #7b1f1f;
+  background: rgba(163, 48, 46, 0.08);
+  color: var(--ac-red-deep);
 }
 
 .navbar__link--active {
-  color: #7b1f1f;
+  color: var(--ac-red-deep);
   font-weight: 700;
 }
 
@@ -782,9 +784,9 @@ main .container {
   text-align: left;
   overflow: hidden;
   background:
-    radial-gradient(ellipse 620px 420px at 78% 40%, rgba(251, 205, 205, 0.38) 0%, transparent 68%),
-    radial-gradient(ellipse 700px 420px at 8% 30%, rgba(255, 232, 232, 0.8) 0%, transparent 72%),
-    linear-gradient(110deg, #fff 0%, #fffafa 48%, #fff5f5 100%);
+    radial-gradient(ellipse 620px 420px at 78% 40%, rgba(197, 108, 103, 0.30) 0%, transparent 68%),
+    radial-gradient(ellipse 700px 420px at 8% 30%, rgba(245, 237, 236, 0.85) 0%, transparent 72%),
+    linear-gradient(110deg, #fff 0%, #fbf6f6 48%, #f6f1f0 100%);
 }
 
 /* Decorative glow */
@@ -802,7 +804,7 @@ main .container {
   height: 520px;
   left: 38%;
   top: -260px;
-  background: radial-gradient(circle, rgba(195, 30, 44, 0.06), transparent 68%);
+  background: radial-gradient(circle, rgba(163, 48, 46, 0.07), transparent 68%);
 }
 
 .acHero::after {
@@ -810,7 +812,7 @@ main .container {
   height: 420px;
   right: 18%;
   bottom: -260px;
-  background: radial-gradient(circle, rgba(195, 30, 44, 0.08), transparent 68%);
+  background: radial-gradient(circle, rgba(92, 100, 112, 0.10), transparent 68%);
 }
 
 .acHeroInner {
@@ -851,8 +853,8 @@ main .container {
 .acGlow {
   color: var(--ac-red);
   text-shadow:
-    0 5px 18px rgba(195, 30, 44, 0.14),
-    0 0 30px rgba(195, 30, 44, 0.08);
+    0 5px 18px rgba(163, 48, 46, 0.16),
+    0 0 30px rgba(163, 48, 46, 0.10);
 }
 
 .acHeroSubtitle {
@@ -872,11 +874,11 @@ main .container {
   margin-top: 14px;
   padding: 0 16px;
   background: rgba(255, 255, 255, 0.94);
-  border: 1px solid #ece7e5;
+  border: 1px solid var(--ac-paper-line);
   border-radius: 999px;
   box-shadow:
-    0 12px 35px rgba(40, 20, 20, 0.08),
-    0 2px 5px rgba(40, 20, 20, 0.03);
+    0 12px 35px rgba(60, 64, 70, 0.10),
+    0 2px 5px rgba(60, 64, 70, 0.04);
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
@@ -884,8 +886,8 @@ main .container {
 .acSearchBox:focus-within {
   transform: translateY(-1px);
   box-shadow:
-    0 16px 40px rgba(40, 20, 20, 0.1),
-    0 0 0 3px rgba(195, 30, 44, 0.06);
+    0 16px 40px rgba(60, 64, 70, 0.12),
+    0 0 0 3px rgba(163, 48, 46, 0.08);
 }
 
 .acSearchIcon {
@@ -931,12 +933,12 @@ main .container {
   position: relative;
   width: min(980px, 100%);
   padding: 8px;
-  border: 1px solid rgba(195, 30, 44, 0.16);
+  border: 1px solid rgba(163, 48, 46, 0.18);
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.9);
   box-shadow:
-    0 30px 65px rgba(100, 25, 25, 0.18),
-    0 8px 25px rgba(100, 25, 25, 0.08);
+    0 30px 65px rgba(70, 74, 82, 0.20),
+    0 8px 25px rgba(70, 74, 82, 0.10);
   transform: rotateX(6deg) rotateY(-10deg) rotate(2.5deg) translateY(4px);
   transform-style: preserve-3d;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -945,8 +947,8 @@ main .container {
 .acProductFrame:hover {
   transform: rotateX(2deg) rotateY(-4deg) rotate(0.5deg) translateY(-6px) scale(1.015);
   box-shadow:
-    0 38px 75px rgba(100, 25, 25, 0.2),
-    0 10px 30px rgba(100, 25, 25, 0.1);
+    0 38px 75px rgba(70, 74, 82, 0.22),
+    0 10px 30px rgba(70, 74, 82, 0.12);
 }
 
 .acProductImage {
@@ -971,8 +973,8 @@ main .container {
   justify-content: center;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(195, 30, 44, 0.16);
-  box-shadow: 0 10px 25px rgba(50, 20, 20, 0.12);
+  border: 1px solid rgba(163, 48, 46, 0.18);
+  box-shadow: 0 10px 25px rgba(60, 64, 70, 0.14);
   font-size: 20px;
 }
 
@@ -985,7 +987,7 @@ main .container {
 .acVisualIconChart {
   right: -12px;
   bottom: 12%;
-  color: #4285f4;
+  color: var(--ac-graphite);
 }
 
 /* 4 CARDS — đổi margin âm thành dương để giãn ra khỏi hero */
@@ -1014,8 +1016,8 @@ main .container {
   display: flex;
   flex-direction: column;
   box-shadow:
-    0 14px 35px rgba(25, 20, 15, 0.08),
-    0 2px 8px rgba(25, 20, 15, 0.03);
+    0 14px 35px rgba(50, 52, 56, 0.08),
+    0 2px 8px rgba(50, 52, 56, 0.04);
   transition:
     transform 0.28s ease,
     box-shadow 0.28s ease,
@@ -1025,10 +1027,10 @@ main .container {
 .acCard:hover {
   text-decoration: none;
   transform: translateY(-8px);
-  border-color: rgba(195, 30, 44, 0.38);
+  border-color: rgba(163, 48, 46, 0.38);
   box-shadow:
-    0 22px 45px rgba(25, 20, 15, 0.12),
-    0 0 30px rgba(195, 30, 44, 0.08);
+    0 22px 45px rgba(50, 52, 56, 0.12),
+    0 0 30px rgba(163, 48, 46, 0.10);
 }
 
 .acCardIndex {
@@ -1043,13 +1045,13 @@ main .container {
   height: 40px;
   margin: 10px 0 12px;
   border-radius: 11px;
-  background: #8d1322;
+  background: var(--ac-gradient);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   font-size: 18px;
-  box-shadow: 0 8px 18px rgba(141, 19, 34, 0.18);
+  box-shadow: 0 8px 18px rgba(163, 48, 46, 0.20);
 }
 
 .acCardTitle {
@@ -1089,8 +1091,8 @@ main .container {
 /* Dark mode */
 [data-theme='dark'] .acHero {
   background:
-    radial-gradient(ellipse 620px 420px at 78% 40%, rgba(130, 30, 40, 0.18) 0%, transparent 68%),
-    #1b1717;
+    radial-gradient(ellipse 620px 420px at 78% 40%, rgba(163, 48, 46, 0.20) 0%, transparent 68%),
+    #1A1B1D;
 }
 
 [data-theme='dark'] .acHeroTitle,
@@ -1106,8 +1108,8 @@ main .container {
 
 [data-theme='dark'] .acSearchBox,
 [data-theme='dark'] .acCard {
-  background: #241d1d;
-  border-color: #3b2c2c;
+  background: #201F21;
+  border-color: #34363A;
 }
 
 [data-theme='dark'] .acSearchInput {
@@ -1255,4 +1257,15 @@ main .container {
   .navbar__search-input {
     width: 320px;
   }
+}
+.acCardBadge {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--ac-red-deep);
+  background: var(--ac-red-tint);
+  border-radius: 999px;
+  vertical-align: middle;
 }
